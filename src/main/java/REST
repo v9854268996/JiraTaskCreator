@@ -1,0 +1,45 @@
+timeoriginalestimate:"10"
+
+Список полей джиры
+https://ihelp.rt.ru/rest/api/2/field
+
+
+https://ihelp.rt.ru/rest/api/2/field/rest/api/2/customFieldOption/10150
+
+https://ihelp.rt.ru/rest/api/2/issue/DHREP-25049
+
+https://docs.atlassian.com/DAC/rest/jira/6.1.html
+
+https://ihelp.rt.ru/rest/api/2/issuetype
+  {
+    "self": "https://ihelp.rt.ru/rest/api/2/issuetype/18",
+    "id": "18",
+    "description": "Часть задачи, которая должна иметь отдельного исполнителя",
+    "iconUrl": "https://ihelp.rt.ru/secure/viewavatar?size=xsmall&avatarId=14316&avatarType=issuetype",
+    "name": "Подзадача",
+    "subtask": true,
+    "avatarId": 14316
+  },
+    {
+      "self": "https://ihelp.rt.ru/rest/api/2/issuetype/17",
+      "id": "17",
+      "description": "Задача на проекте",
+      "iconUrl": "https://ihelp.rt.ru/secure/viewavatar?size=xsmall&avatarId=14318&avatarType=issuetype",
+      "name": "Задача",
+      "subtask": false,
+      "avatarId": 14318
+    },
+      {
+        "self": "https://ihelp.rt.ru/rest/api/2/issuetype/10000",
+        "id": "10000",
+        "description": "Создано посредством JIRA Software — не редактировать/удалять. Тип проблем для большой пользовательской истории, требующей развертки.",
+        "iconUrl": "https://ihelp.rt.ru/images/icons/issuetypes/epic.svg",
+        "name": "Epic",
+        "subtask": false
+      },
+
+
+
+If you want to get all the allowed fieldValues for a custom field, use the createmeta or editmeta methods. Here is an example resource:
+
+/rest/api/2/issue/createmeta?projectKeys=YOURPROJECTKEY&issuetypeNames=Bug&expand=projects.issuetypes.fields
